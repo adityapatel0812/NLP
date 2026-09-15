@@ -1,92 +1,365 @@
-# Natural Language Processing Practicals
+# 🧠 NLP Unit 1 — Practical Programs
 
-## Overview
+> A hands-on collection of **Natural Language Processing (NLP)** programs implemented using **Python, NLTK, and spaCy**.
 
-This repository contains a collection of Natural Language Processing practical programs implemented using Python, NLTK, and spaCy. The programs demonstrate fundamental NLP techniques such as tokenization, stemming, lemmatization, stop-word removal, POS tagging, parsing, chunking, and named entity recognition.
+This repository contains **6 practical programs** covering fundamental NLP concepts, from basic text preprocessing to **Named Entity Recognition (NER)**.
 
-## Programs
+---
 
-### 1. Tokenization of Sentences and Words
+## 🚀 What's Inside?
 
-This program demonstrates sentence and word tokenization using both NLTK and spaCy. The input text is divided into individual sentences and tokens.
+| #  | Practical                       | Main Concepts                     | Library     |
+| -- | ------------------------------- | --------------------------------- | ----------- |
+| 01 | 🔤 **Tokenization**             | Sentence & Word Tokenization      | NLTK, spaCy |
+| 02 | 🌱 **Stemming & Lemmatization** | Root & Base Word Extraction       | NLTK        |
+| 03 | 🛑 **Stop-word Removal**        | Tokenization & Filtering          | NLTK        |
+| 04 | 🏷️ **POS Tagging**             | Grammatical Classification        | NLTK        |
+| 05 | 🌳 **Parsing & Chunking**       | Syntax & Dependency Analysis      | NLTK, spaCy |
+| 06 | 📍 **Named Entity Recognition** | Entity Detection & Classification | spaCy       |
 
-**Libraries Used:**
+---
 
-* NLTK
-* spaCy
+# 📚 Practicals
 
-### 2. Stemming and Lemmatization
+## 01 — 🔤 Tokenization
 
-This program applies stemming and lemmatization to sample text. Stemming reduces words to their root-like forms, while lemmatization converts words into their meaningful base forms.
+**Folder:** `01_Tokenization`
 
-**Libraries Used:**
+Tokenization is the process of breaking text into smaller units called **tokens**, such as sentences and words.
 
-* NLTK
-* PorterStemmer
-* WordNetLemmatizer
+### Concepts
 
-### 3. Stop-word Removal
+* Sentence Tokenization
+* Word Tokenization
 
-This program removes commonly occurring words such as articles, conjunctions, and prepositions from a document using NLTK's English stop-word list.
-
-**Libraries Used:**
-
-* NLTK
-* NLTK Stopwords
-
-### 4. Part-of-Speech Tagging
-
-This program assigns grammatical categories to the words of a given sentence. Each word is tagged according to its role, such as noun, verb, adjective, adverb, or determiner.
-
-**Libraries Used:**
-
-* NLTK
-* POS Tagger
-
-### 5. Parsing and Chunking using RegEx and spaCy
-
-This program demonstrates syntactic analysis using regular-expression-based chunking with NLTK and dependency parsing and noun-chunk extraction with spaCy.
-
-**Libraries Used:**
-
-* NLTK
-* RegexpParser
-* spaCy
-
-### 6. Named Entity Recognition
-
-This program uses spaCy to identify named entities present in text. Entities such as people, organizations, locations, and dates are detected and assigned appropriate labels.
-
-**Libraries Used:**
-
-* spaCy
-* en_core_web_sm
-
-## Technologies Used
+### Tools
 
 * Python
-* Google Colab
 * NLTK
 * spaCy
 
-## Learning Outcomes
+📄 **File:** `tokenization.ipynb`
 
-Through these practical programs, the following NLP concepts are demonstrated:
+---
 
-* Sentence and word tokenization
+## 02 — 🌱 Stemming & Lemmatization
+
+**Folder:** `02_Stemming_Lemmatization`
+
+This practical demonstrates techniques used to obtain the **root or base form of words**.
+
+### Stemming
+
+Stemming removes word endings to obtain a root form. The result may sometimes not be a valid dictionary word.
+
+**Example:**
+
+```text
+Studies → Studi
+Playing → Play
+```
+
+### Lemmatization
+
+Lemmatization converts a word into its meaningful **dictionary base form**.
+
+**Example:**
+
+```text
+Studies → Study
+Playing → Play
+```
+
+### Concepts
+
+* Porter Stemming
+* WordNet Lemmatization
+
+### Tools
+
+* Python
+* NLTK Porter Stemmer
+* NLTK WordNet Lemmatizer
+
+📄 **File:** `stemming_lemmatization.ipynb`
+
+---
+
+## 03 — 🛑 Stop-word Removal
+
+**Folder:** `03_Stopword_Removal`
+
+Stop words are frequently occurring words that may provide limited information for certain NLP tasks.
+
+### Examples
+
+```text
+the
+is
+a
+an
+and
+of
+```
+
+This practical demonstrates how stop words can be identified and removed from a document using NLTK.
+
+### Concepts
+
+* Word Tokenization
+* Stop-word Identification
+* Stop-word Removal
+
+### Tools
+
+* Python
+* NLTK
+
+📄 **File:** `stopword_removal.ipynb`
+
+---
+
+## 04 — 🏷️ Part-of-Speech Tagging
+
+**Folder:** `04_POS_Tagging`
+
+**POS Tagging** assigns a grammatical category to every word in a sentence.
+
+### Common POS Categories
+
+* Noun
+* Verb
+* Adjective
+* Adverb
+* Preposition
+* Determiner
+
+### Concepts
+
+* Word Tokenization
+* POS Tagging
+* Grammatical Categories
+
+### Tools
+
+* Python
+* NLTK
+
+📄 **File:** `pos_tagging.ipynb`
+
+---
+
+## 05 — 🌳 Parsing & Chunking
+
+**Folder:** `05_Parsing_Chunking`
+
+This practical demonstrates **syntactic analysis** using regular-expression-based chunking and dependency parsing.
+
+### Concepts
+
+* POS Tagging
+* Regular Expression Chunking
+* Noun Phrase Chunking
+* Dependency Parsing
+* Grammatical Relationships
+
+### Tools
+
+* Python
+* NLTK
+* spaCy
+
+📄 **File:** `parsing_chunking.ipynb`
+
+---
+
+## 06 — 📍 Named Entity Recognition
+
+**Folder:** `06_Named_Entity_Recognition`
+
+**Named Entity Recognition (NER)** identifies and classifies important entities present in text.
+
+### Entity Examples
+
+| Entity          | Example           |
+| --------------- | ----------------- |
+| 👤 Person       | Narendra Modi     |
+| 🏢 Organization | Google            |
+| 📍 Location     | India             |
+| 📅 Date         | 15 September 2026 |
+| 💰 Money        | ₹10,000           |
+| 🌎 GPE          | Delhi             |
+
+### Concepts
+
+* Named Entity Recognition
+* Entity Classification
+* Entity Labels
+
+### Tools
+
+* Python
+* spaCy
+
+📄 **File:** `ner.ipynb`
+
+---
+
+# 🛠️ Technologies Used
+
+<p align="center">
+
+<img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+<img src="https://img.shields.io/badge/NLTK-NLP-154f5c?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/spaCy-NLP-09A3D5?style=for-the-badge"/>
+
+</p>
+
+* 🐍 Python 3
+* 🔤 NLTK
+* 🧠 spaCy
+* 💬 Natural Language Processing
+
+---
+
+# ⚙️ Installation
+
+Make sure **Python 3** is installed on your system.
+
+### Install Required Libraries
+
+```bash
+pip install nltk spacy
+```
+
+### Install spaCy English Model
+
+```bash
+python -m spacy download en_core_web_sm
+```
+
+### NLTK Resources
+
+The required NLTK resources are downloaded by the respective programs when needed.
+
+These include:
+
+```text
+punkt
+punkt_tab
+stopwords
+averaged_perceptron_tagger_eng
+wordnet
+omw-1.4
+```
+
+---
+
+# ▶️ How to Run
+
+The programs are provided as Python `.ipynb` files.
+
+You can open and run them using any environment that supports Python notebooks, such as:
+
+* Jupyter Notebook
+* JupyterLab
+* VS Code with the Jupyter extension
+
+Open the required file and execute the cells sequentially.
+
+---
+
+# 📂 Repository Structure
+
+```text
+NLP-Unit-1-Programs/
+│
+├── 📁 01_Tokenization/
+│   └── 📄 tokenization.ipynb
+│
+├── 📁 02_Stemming_Lemmatization/
+│   └── 📄 stemming_lemmatization.ipynb
+│
+├── 📁 03_Stopword_Removal/
+│   └── 📄 stopword_removal.ipynb
+│
+├── 📁 04_POS_Tagging/
+│   └── 📄 pos_tagging.ipynb
+│
+├── 📁 05_Parsing_Chunking/
+│   └── 📄 parsing_chunking.ipynb
+│
+├── 📁 06_Named_Entity_Recognition/
+│   └── 📄 ner.ipynb
+│
+└── 📄 README.md
+```
+
+---
+
+# 🎯 Learning Objectives
+
+Through these practicals, the following fundamental NLP concepts are demonstrated:
+
+* Sentence Tokenization
+* Word Tokenization
 * Stemming
 * Lemmatization
-* Stop-word removal
-* Part-of-Speech tagging
-* Syntactic parsing
-* RegEx-based chunking
-* Noun chunking
-* Named Entity Recognition
+* Stop-word Removal
+* Part-of-Speech (POS) Tagging
+* Parsing
+* Chunking
+* Named Entity Recognition (NER)
 
-## Execution
+The programs demonstrate how **raw text can be processed, transformed, and analyzed** using different NLP techniques.
 
-The programs can be executed directly in Google Colab. Required Python libraries and spaCy language models are installed or downloaded within the respective notebooks.
+---
 
-## Author
+# 🎓 Course Outcome
 
-NLP Practical Assignment
+This repository provides hands-on understanding of fundamental **Natural Language Processing** techniques and their implementation using popular Python NLP libraries.
+
+The practicals demonstrate a basic NLP workflow:
+
+```text
+Raw Text
+   ↓
+Tokenization
+   ↓
+Text Preprocessing
+   ↓
+Stemming / Lemmatization
+   ↓
+POS Tagging
+   ↓
+Parsing & Chunking
+   ↓
+Named Entity Recognition
+   ↓
+Processed & Analyzed Text
+```
+
+---
+
+# 👨‍💻 Author
+
+### Aditya Patel
+
+**B.Tech CSE (AI) | NLP Practical Work**
+
+🔗 **GitHub:**
+https://github.com/adityapatel0812
+
+---
+
+# 📌 Purpose
+
+This repository is created for **academic and practical learning purposes** and demonstrates fundamental NLP concepts using:
+
+**Python + NLTK + spaCy**
+
+---
+
+<p align="center">
+  ⭐ If you find this repository useful, consider giving it a star!
+</p>
