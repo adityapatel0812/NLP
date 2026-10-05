@@ -159,7 +159,7 @@ NLP-Notebooks/
 
 🚀 Getting Started
 1. Clone the Repository
-git clone https://github.com/ayushniet01/nlp-notebooks.git
+git clone https://github.com/adityapatel0812/nlp-notebooks.git
 cd nlp-notebooks
 
 2. Create a Virtual Environment
@@ -359,7 +359,7 @@ You can add an open-source license such as the MIT License if you plan to distri
 
 👨‍💻 Author
 
-AYUSH KUMAR SINGH
+ADITYA PATEL
 
 A hands-on collection of NLP concepts, implementations, and practical examples using Python.
 
